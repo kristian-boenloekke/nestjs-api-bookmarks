@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  dev-db:
+    image: postgres:latest
+    ports:
+      - "5434:5432"  
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: nest
+    volumes:
+      - pg_data:/var/lib/postgresql/data  # Persists DB data
+
+volumes:
+  pg_data:
