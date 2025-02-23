@@ -11,6 +11,16 @@ services:
       POSTGRES_DB: nest
     volumes:
       - pg_data:/var/lib/postgresql/data  # Persists DB data
+  test-db:
+    image: postgres:latest
+    ports:
+    - "5435:5432"  
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: nest
+    volumes:
+      - pg_data:/var/lib/postgresql/data  # Persists DB data
 
 volumes:
   pg_data:

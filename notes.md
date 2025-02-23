@@ -75,5 +75,15 @@ Her kan vi også transformere data, - forestil at der forsøges at injecte noget
 
 
 
+## Testing, e2e
+
+added --watch to test:e2e, for running test on every change, and --no-cache to script in package.json
+
+added dotenv package, and specified which .env file to use, i.e. .evn.test
+
+added hook to package.json - "pretest:e2e"
+
+
+
 
 
